@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.Lighting?>
+<?import javafx.scene.effect.Shadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="roomContext" prefHeight="700" prefWidth="850" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.RoomTableController">
+   <children>
+      <ImageView fitHeight="700" fitWidth="850" layoutX="1.0" pickOnBounds="true">
+         <image>
+            <Image url="@../asserts/wallpaperflare.com_wallpaper%20(7).jpg" />
+         </image>
+         <effect>
+            <Lighting diffuseConstant="0.71" specularConstant="0.0">
+               <bumpInput>
+                  <Shadow />
+               </bumpInput>
+               <light>
+               </light>
+            </Lighting>
+         </effect>
+      </ImageView>
+      <Button layoutX="46.0" layoutY="47.0" mnemonicParsing="false" onAction="#backToHomeOnAction" style="-fx-background-radius: 2.0em; -fx-background-color: #de0101;" text="BACK TO MENU" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="15" />
+         </font>
+      </Button>
+      <TextField fx:id="txtRoomType" layoutX="104.0" layoutY="169.0" prefHeight="31.0" prefWidth="250.0" promptText="ROOM TYPE" style="-fx-background-color: #ffffff;">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </TextField>
+      <TextField fx:id="txtDate" layoutX="499.0" layoutY="169.0" prefHeight="31.0" prefWidth="250.0" promptText="DATE" style="-fx-background-color: #ffffff;">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </TextField>
+      <TextField fx:id="txtCusName" layoutX="499.0" layoutY="117.0" prefHeight="31.0" prefWidth="250.0" promptText="CUSTOMER NAME" style="-fx-background-color: #ffffff;">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </TextField>
+      <TextField fx:id="txuCusNic" layoutX="104.0" layoutY="219.0" prefHeight="31.0" prefWidth="250.0" promptText="CUSTOMER NIC" style="-fx-background-color: #ffffff;">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </TextField>
+      <TextField fx:id="txtRoomNo" layoutX="104.0" layoutY="117.0" prefHeight="31.0" prefWidth="250.0" promptText="ROOM NUM" style="-fx-background-color: #ffffff;">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </TextField>
+      <TextField fx:id="txtTime" layoutX="499.0" layoutY="219.0" prefHeight="31.0" prefWidth="250.0" promptText="TIME" style="-fx-background-color: #ffffff;">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </TextField>
+      <TextField fx:id="searchAdminRoom" layoutX="11.0" layoutY="325.0" prefHeight="39.0" prefWidth="831.0" promptText="Search..">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </TextField>
+      <Button fx:id="btnSave" layoutX="301.0" layoutY="265.0" onAction="#saveOnAction" prefHeight="44.0" prefWidth="250.0" style="-fx-background-color: #411b04; -fx-background-radius: 1.5em;" text="Save" textFill="WHITE" textOverrun="CENTER_ELLIPSIS">
+         <font>
+            <Font name="System Bold" size="20.0" />
+         </font>
+      </Button>
+      <Button layoutX="658.0" layoutY="39.0" onAction="#btnNewRoom" prefHeight="31.0" prefWidth="162.0" style="-fx-background-color: #411b04; -fx-background-radius: 1em;" text="+ NEW" textFill="WHITE" textOverrun="CENTER_ELLIPSIS">
+         <font>
+            <Font name="System Bold" size="20.0" />
+         </font>
+      </Button>
+      <TableView fx:id="tblRooms" editable="true" layoutX="11.0" layoutY="376.0" opacity="0.8" prefHeight="303.0" prefWidth="831.0" style="-fx-border-color: BLACK;">
+        <columns>
+          <TableColumn fx:id="rmNoCol" prefWidth="121.0" text="ROOM NUM" />
+          <TableColumn fx:id="rmTypCol" prefWidth="109.0" text="TYPE" />
+            <TableColumn fx:id="cNicCol" prefWidth="146.0" text="CUSTOMER NUM" />
+            <TableColumn fx:id="cNameCol" minWidth="0.0" prefWidth="159.0" text="CUSTOMER NAME" />
+            <TableColumn fx:id="dateCol" prefWidth="129.0" text="DATE" />
+            <TableColumn fx:id="timeCol" prefWidth="66.0" text="TIME" />
+            <TableColumn fx:id="optionCol" prefWidth="106.0" />
+        </columns>
+      </TableView>
+   </children>
+</AnchorPane>

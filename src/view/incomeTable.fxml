@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="incomeContext" prefHeight="700" prefWidth="850" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.IncomeTableController">
+   <children>
+      <ImageView fitHeight="700" fitWidth="850" pickOnBounds="true">
+         <image>
+            <Image url="@../asserts/wallpaperflare.com_wallpaper%20(6).jpg" />
+         </image>
+      </ImageView>
+      <Button layoutX="46.0" layoutY="47.0" mnemonicParsing="false" onAction="#backToHomeOnAction" style="-fx-background-radius: 2.0em; -fx-background-color: #de0101;" text="BACK TO MENU" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="15" />
+         </font>
+      </Button>
+      <Button layoutX="395.0" layoutY="122.0" mnemonicParsing="false" onAction="#monthlyIncomeOnAction" prefHeight="44.0" prefWidth="164.0" style="-fx-background-color: #411b04; -fx-background-radius: 2.0EM;" text="MONTHLY INOME" textFill="#fcfcfc">
+         <font>
+            <Font name="System Bold" size="20.0" />
+         </font></Button>
+      <Button layoutX="395.0" layoutY="201.0" mnemonicParsing="false" onAction="#annuallyIncomeOnAction" prefHeight="44.0" prefWidth="164.0" style="-fx-background-color: #411b04; -fx-background-radius: 2.0EM;" text="ANNUAL INCOME" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="20.0" />
+         </font></Button>
+      <TextField fx:id="txtMonth" layoutX="662.0" layoutY="379.0" prefHeight="31.0" prefWidth="172.0" promptText="MONTH" style="-fx-background-color: #ffffff;" />
+      <TextField fx:id="txtServiceCgh" layoutX="662.0" layoutY="440.0" opacity="0.8" prefHeight="31.0" prefWidth="172.0" promptText="SERVICE CHARGE" style="-fx-background-color: #ffffff;" />
+      <TextField fx:id="txtRoomCgh" layoutX="662.0" layoutY="505.0" prefHeight="31.0" prefWidth="172.0" promptText="ROOM CHARGE" style="-fx-background-color: #ffffff;" />
+      <Button fx:id="btnSaveIncome" layoutX="662.0" layoutY="568.0" onAction="#btnSaveOnAction" prefHeight="40.0" prefWidth="172.0" style="-fx-background-color: #411b04; -fx-background-radius: 1.5em;" text="Save" textFill="WHITE" textOverrun="CENTER_ELLIPSIS">
+         <font>
+            <Font name="System Bold" size="20.0" />
+         </font>
+      </Button>
+      <Button layoutX="662.0" layoutY="301.0" onAction="#addNewOnAction" prefHeight="31.0" prefWidth="172.0" style="-fx-background-color: #411b04; -fx-background-radius: 1em;" text="+ NEW" textFill="WHITE" textOverrun="CENTER_ELLIPSIS">
+         <font>
+            <Font name="System Bold" size="20.0" />
+         </font></Button>
+      <Label fx:id="serviceTotal" alignment="CENTER" layoutX="196.0" layoutY="203.0" prefHeight="40.0" prefWidth="164.0" style="-fx-background-color: white; -fx-background-radius: 1.0em;">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <Label fx:id="roomTotal" alignment="CENTER" layoutX="196.0" layoutY="124.0" prefHeight="40.0" prefWidth="164.0" style="-fx-background-color: white; -fx-background-radius: 1.0em;">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <Label fx:id="monthlyIncomeAvg" alignment="CENTER" layoutX="578.0" layoutY="119.0" prefHeight="50.0" prefWidth="183.0" style="-fx-background-color: #813611; -fx-background-radius: 1.0EM;" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="20.0" />
+         </font>
+         <effect>
+            <DropShadow height="30.0" radius="14.5" width="30.0" />
+         </effect>
+      </Label>
+      <Label fx:id="annualIncome" alignment="CENTER" layoutX="578.0" layoutY="198.0" prefHeight="50.0" prefWidth="183.0" style="-fx-background-color: #813611; -fx-background-radius: 1.0EM;" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="20.0" />
+         </font>
+         <effect>
+            <DropShadow height="30.0" radius="14.5" width="30.0" />
+         </effect>
+      </Label>
+      <Label alignment="CENTER" layoutX="30.0" layoutY="203.0" prefHeight="40.0" prefWidth="149.0" style="-fx-background-color: #411b04; -fx-background-radius: 1.0em;" text="SERVICE INCOME" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </Label>
+      <Label alignment="CENTER" layoutX="30.0" layoutY="124.0" prefHeight="40.0" prefWidth="149.0" style="-fx-background-color: #411b04; -fx-background-radius: 1.0em;" text="ROOM INCOME" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </Label>
+      <TableView fx:id="tblIncome" layoutX="30.0" layoutY="284.0" prefHeight="373.0" prefWidth="619.0">
+        <columns>
+          <TableColumn fx:id="colMonth" prefWidth="138.0" text="MONTH" />
+            <TableColumn fx:id="colSvCgh" prefWidth="185.0" text="SERVICE CHARGE" />
+          <TableColumn fx:id="colRmCgh" minWidth="7.0" prefWidth="161.0" text="ROOM CHARGE" />
+            <TableColumn fx:id="colOption" minWidth="7.0" prefWidth="134.0" />
+        </columns>
+      </TableView>
+   </children>
+</AnchorPane>

@@ -1,0 +1,17 @@
+<component name="libraryTable">
+  <library name="jfoenix-8.0.8">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/lib/jfoenix-8.0.8.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../../../../../../Program Files/Java/javafx-sdk-19/lib/javafx-swt.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../../../../../../Program Files/Java/javafx-sdk-19/lib/javafx.base.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../../../../../../Program Files/Java/javafx-sdk-19/lib/javafx.controls.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../../../../../../Program Files/Java/javafx-sdk-19/lib/javafx.fxml.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../../../../../../Program Files/Java/javafx-sdk-19/lib/javafx.graphics.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../../../../../../Program Files/Java/javafx-sdk-19/lib/javafx.media.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../../../../../../Program Files/Java/javafx-sdk-19/lib/javafx.swing.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../../../../../../Program Files/Java/javafx-sdk-19/lib/javafx.web.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="reserveRoomContextt" prefHeight="700" prefWidth="850" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.ReserveRoomController">
+   <children>
+      <ImageView fitHeight="700.0" fitWidth="850" pickOnBounds="true">
+         <image>
+            <Image url="@../asserts/wallpaperflare.com_wallpaper%20(7).jpg" />
+         </image>
+      </ImageView>
+      <Button layoutX="46.0" layoutY="47.0" mnemonicParsing="false" onAction="#backToHomeRecepOnAction" style="-fx-background-radius: 2.0em; -fx-background-color: #de0101;" text="BACK TO MENU" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="20.0" />
+         </font>
+         <effect>
+            <DropShadow />
+         </effect>
+      </Button>
+      <TextField fx:id="txtCusNic" layoutX="120.0" layoutY="209.0" prefHeight="31.0" prefWidth="268.0" promptText="CUSTOMER - NIC" style="-fx-background-color: #ffffff;">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </TextField>
+      <TextField fx:id="txtAddress" layoutX="464.0" layoutY="145.0" prefHeight="31.0" prefWidth="268.0" promptText="ADDRESS" style="-fx-background-color: #ffffff;">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </TextField>
+      <TextField fx:id="txtEmail" layoutX="464.0" layoutY="209.0" prefHeight="31.0" prefWidth="268.0" promptText="E-MAIL" style="-fx-background-color: #ffffff;">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </TextField>
+      <TextField fx:id="txtTpNum" layoutX="120.0" layoutY="264.0" prefHeight="31.0" prefWidth="268.0" promptText="T.P NUMBER" style="-fx-background-color: #ffffff;">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </TextField>
+      <TextField fx:id="txtCusName" layoutX="120.0" layoutY="145.0" prefHeight="31.0" prefWidth="268.0" promptText="CUSTOMER NAME" style="-fx-background-color: #ffffff;">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </TextField>
+      <TextField fx:id="txtRoomNum" layoutX="464.0" layoutY="264.0" prefHeight="31.0" prefWidth="268.0" promptText="ROOM NUMBER" style="-fx-background-color: #ffffff;">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </TextField>
+      <TextField fx:id="searchCustomer" layoutX="13.0" layoutY="389.0" prefHeight="39.0" prefWidth="829.0" promptText="Search..">
+         <font>
+            <Font size="18.0" />
+         </font>
+         <effect>
+            <DropShadow height="30.0" radius="14.5" width="30.0" />
+         </effect>
+      </TextField>
+      <Button fx:id="btnSaveDetails" layoutX="304.0" layoutY="320.0" onAction="#btnSaveOnAction" prefHeight="44.0" prefWidth="248.0" style="-fx-background-color: #411b04; -fx-background-radius: 1.5em;" text="Save" textFill="WHITE" textOverrun="CENTER_ELLIPSIS">
+         <font>
+            <Font name="System Bold" size="20.0" />
+         </font>
+         <effect>
+            <DropShadow height="30.0" radius="14.5" width="30.0" />
+         </effect>
+      </Button>
+      <Button layoutX="651.0" layoutY="43.0" onAction="#btnAddNewCustomerOnAction" prefHeight="31.0" prefWidth="162.0" style="-fx-background-color: #411b04; -fx-background-radius: 1em;" text="+ NEW" textFill="WHITE" textOverrun="CENTER_ELLIPSIS">
+         <font>
+            <Font name="System Bold" size="20.0" />
+         </font>
+         <effect>
+            <DropShadow />
+         </effect>
+      </Button>
+      <TableView fx:id="tblCustomer" editable="true" layoutX="13.0" layoutY="441.0" prefHeight="253.0" prefWidth="829.0" style="-fx-border-color: BLACK;">
+         <columns>
+            <TableColumn fx:id="colCusName" prefWidth="132.0" text="CUSTOMER NAME" />
+            <TableColumn fx:id="colCusNic" prefWidth="131.0" text="CUSTOMER NUM" />
+            <TableColumn fx:id="colTPNum" prefWidth="132.0" text="T.P NUMBER" />
+            <TableColumn fx:id="colEmail" minWidth="0.0" prefWidth="122.0" text="EMAIL" />
+            <TableColumn fx:id="colAddress" prefWidth="104.0" text="ADDRESS" />
+            <TableColumn fx:id="colRoomNum" prefWidth="140.0" text="ROOM NUMBER" />
+            <TableColumn fx:id="colRoomAvailable" prefWidth="133.0" text="ROOM AVAILABILITY" />
+            <TableColumn fx:id="colMealPlan" minWidth="0.0" prefWidth="217.0" text="MEAL-PLAN" />
+            <TableColumn fx:id="colCancelOption" minWidth="0.0" prefWidth="150.0" text="CANCEL REQUEST" />
+         </columns>
+      </TableView>
+   </children>
+</AnchorPane>
